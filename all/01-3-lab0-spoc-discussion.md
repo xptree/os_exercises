@@ -47,7 +47,7 @@
 搭建好实验环境，请描述碰到的困难和解决的过程。
 - [x]  
 
-> 没有流量 
+> 无 
 
 熟悉基本的git命令行操作命令，从github上的[ucore git repo](http://www.github.com/chyyuu/ucore_lab)下载ucore lab实验
 - [x]  

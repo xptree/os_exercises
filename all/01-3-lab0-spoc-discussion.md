@@ -8,32 +8,35 @@
 - [x]  
 
 >  http://www.imada.sdu.dk/Courses/DM18/Litteratur/IntelnATT.htm
+不理解的汇编语言有inb, oub
 
 虽然学过计算机原理和x86汇编（根据THU-CS的课程设置），但对ucore中涉及的哪些硬件设计或功能细节不够了解？
 - [x]  
 
->   
+> 无 
 
 
 哪些困难（请分优先级）会阻碍你自主完成lab实验？
 - [x]  
 
->   
+>
+* 代码的可读性
+* 课程讲授的趣味性
 
 如何把一个在gdb中或执行过程中出现的物理/线性地址与你写的代码源码位置对应起来？
 - [x]  
 
->   
+> 起始地址 + offset =  gdb 过程中出现的地址 
 
 了解函数调用栈对lab实验有何帮助？
 - [x]  
 
->   
+> 可以知道函数调用的过程和返回值的过程   
 
 你希望从lab中学到什么知识？
 - [x]  
 
->   
+> 对操作系统的内部有更加深入的了解 
 
 ---
 
@@ -44,17 +47,17 @@
 搭建好实验环境，请描述碰到的困难和解决的过程。
 - [x]  
 
-> 
+> 没有流量 
 
 熟悉基本的git命令行操作命令，从github上的[ucore git repo](http://www.github.com/chyyuu/ucore_lab)下载ucore lab实验
 - [x]  
 
-> 
+> 已经clone
 
 尝试用qemu+gdb（or ECLIPSE-CDT）调试lab1
 - [x]  
 
-> 
+> 成功 
 
 对于如下的代码段，请说明”：“后面的数字是什么含义
 ```
@@ -73,7 +76,8 @@ struct gatedesc {
 ```
 - [x]  
 
-> 
+> bit field 技术，将若干个数据域压缩到一个structure中，通过在每个变量后放置:bit length，
+来指定它所占的位数。
 
 对于如下的代码段，
 ```
@@ -98,7 +102,7 @@ SETGATE(intr, 0,1,2,3);
 请问执行上述指令后， intr的值是多少？
 - [x]  
 
-> 
+> 10002 
 
 请分析 [list.h](https://github.com/chyyuu/ucore_lab/blob/master/labcodes/lab2/libs/list.h)内容中大致的含义，并能include这个文件，利用其结构和功能编写一个数据结构链表操作的小C程序
 - [x]  

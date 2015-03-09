@@ -236,7 +236,34 @@ shmdt   拆卸共享内存
   - 答案对上述两个要点进行了正确阐述（2分）
   - 答案除了对上述两个要点都进行了正确阐述外，还进行了扩展和更丰富的说明（3分）
  ```
- 
+
+```
+user/libs/syscall.c:    return syscall(SYS_exit, error_code);
+user/libs/syscall.c:    return syscall(SYS_fork);
+user/libs/syscall.c:    return syscall(SYS_wait, pid, store);
+user/libs/syscall.c:    return syscall(SYS_yield);
+user/libs/syscall.c:    return syscall(SYS_kill, pid);
+user/libs/syscall.c:    return syscall(SYS_getpid);
+user/libs/syscall.c:    return syscall(SYS_putc, c);
+user/libs/syscall.c:    return syscall(SYS_pgdir);
+user/libs/syscall.c:    syscall(SYS_lab6_set_priority, priority);
+user/libs/syscall.c:    return syscall(SYS_sleep, time);
+user/libs/syscall.c:    return syscall(SYS_gettime);
+user/libs/syscall.c:    return syscall(SYS_exec, name, argc, argv);
+user/libs/syscall.c:    return syscall(SYS_open, path, open_flags);
+user/libs/syscall.c:    return syscall(SYS_close, fd);
+user/libs/syscall.c:    return syscall(SYS_read, fd, base, len);
+user/libs/syscall.c:    return syscall(SYS_write, fd, base, len);
+user/libs/syscall.c:    return syscall(SYS_seek, fd, pos, whence);
+user/libs/syscall.c:    return syscall(SYS_fstat, fd, stat);
+user/libs/syscall.c:    return syscall(SYS_fsync, fd);
+user/libs/syscall.c:    return syscall(SYS_getcwd, buffer, len);
+user/libs/syscall.c:    return syscall(SYS_getdirentry, fd, dirent);
+user/libs/syscall.c:    return syscall(SYS_dup, fd1, fd2);
+```
+
+这些系统调用设计文件操作，进程管理，内存管理三类。
+
 ## 3.4 linux系统调用分析
  1. 通过分析[lab1_ex0](https://github.com/chyyuu/ucore_lab/blob/master/related_info/lab1/lab1-ex0.md)了解Linux应用的系统调用编写和含义。(w2l1)
  
@@ -249,6 +276,16 @@ shmdt   拆卸共享内存
   - 答案除了对上述两个要点都进行了正确阐述外，还进行了扩展和更丰富的说明（3分）
  
  ```
+* objdump 反汇编目标文件
+* nm 打印符号表
+* file 输出文件信息
+
+具体而言
+* eax：系统调用号，0x4为SYS_write
+* ebx：file descriptor号，0x1为stdout 
+* ecx：write的第一个参数，写入部分的头指针
+* edx：write的第二个参数，写入部分的长度
+
  
  1. 通过调试[lab1_ex1](https://github.com/chyyuu/ucore_lab/blob/master/related_info/lab1/lab1-ex1.md)了解Linux应用的系统调用执行过程。(w2l1)
  
@@ -260,6 +297,8 @@ shmdt   拆卸共享内存
   - 答案对上述两个要点进行了正确阐述（2分）
   - 答案除了对上述两个要点都进行了正确阐述外，还进行了扩展和更丰富的说明（3分）
  ```
+
+strace的作用是运行程序并且输出程序运行过程中调用的系统调用。
  
 ## 3.5 ucore系统调用分析
  1. ucore的系统调用中参数传递代码分析。

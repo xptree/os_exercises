@@ -66,9 +66,9 @@ getsid  获取会晤标识号
 setsid  设置会晤标识号
 ```
 
-2. 文件系统控制
+* 文件系统控制
 
-* 文件读写操作
+1. 文件读写操作
 ```
 fcntl   文件控制
 open    打开文件
@@ -92,7 +92,7 @@ umask   设置文件权限掩码
 fsync   把文件在内存中的部分写回磁盘
 ```
 
-* 文件系统操作
+2. 文件系统操作
 ```
 access  确定文件的可存取性
 chdir   改变当前工作目录
@@ -126,7 +126,7 @@ utimes  参见utime
 quotactl    控制磁盘配额
 ```
 
-3. 系统控制
+* 系统控制
 ```
 ioctl   I/O总控制函数
 _sysctl 读/写系统参数
@@ -139,7 +139,7 @@ query_module    查询模块信息
 *get_kernel_syms    取得核心符号,已被query_module代替
 ```
 
-4. 内存管理
+* 内存管理
 ```
 brk 改变数据段空间的分配
 sbrk    参见brk
@@ -157,7 +157,7 @@ sync    将内存缓冲区数据写回硬盘
 cacheflush  将指定缓冲区中的内容写回磁盘
 ```
 
-5. 网络管理
+* 网络管理
 ```
 getdomainname   取域名
 setdomainname   设置域名
@@ -167,7 +167,7 @@ gethostname 获取本主机名称
 sethostname 设置主机名称
 ```
 
-6. socket控制
+* socket控制
 ```
 soc识号
 setegid 设置有效组标识号
@@ -184,12 +184,13 @@ setfsuid    设置文件系统检查时使用的用户标识号
 getgroups   获取后补组标志清单
 setgroups   设置后补组标志清单
 ```
-8. 进程间通信
+
+* 进程间通信
 ```
 ipc 进程间通信总控制调用
 ```
 
-* 信号
+1. 信号
 ```
 sigaction   设置对指定信号的处理方法
 sigprocmask 根据参数对信号集中的信号执行阻塞/解除阻塞等操作
@@ -198,7 +199,7 @@ sigsuspend  挂起进程等待特定信号
 signal  参见signa
 ```
 
-* 消息
+2. 消息
 ```
 msgctl  消息控制操作
 msgget  获取消息队列
@@ -206,19 +207,19 @@ msgsnd  发消息
 msgrcv  取消息
 ```
 
-* 管道
+3. 管道
 ```
 pipe    创建管道
 ```
 
-* 信号量
+4. 信号量
 ```
 semctl  信号量控制
 semget  获取一组信号量
 semop   信号量操作
 ```
 
-* 共享内存
+5. 共享内存
 ```
 shmctl  控制共享内存
 shmget  获取共享内存

@@ -8,36 +8,54 @@
 - [x]  
 
 >  http://www.imada.sdu.dk/Courses/DM18/Litteratur/IntelnATT.htm
+<<<<<<< HEAD
 >  inb一般应用程序用不到的指令等。
+=======
+不理解的汇编语言有inb, oub
+>>>>>>> quiz2
 
 虽然学过计算机原理和x86汇编（根据THU-CS的课程设置），但对ucore中涉及的哪些硬件设计或功能细节不够了解？
 - [x]  
 
+<<<<<<< HEAD
 > 中断寄存器和非通用寄存器等。
+=======
+> 无 
+>>>>>>> quiz2
 
 
 哪些困难（请分优先级）会阻碍你自主完成lab实验？
 - [x]  
 
->   
+>
+* 代码的可读性
+* 课程讲授的趣味性
 
 如何把一个在gdb中或执行过程中出现的物理/线性地址与你写的代码源码位置对应起来？
 - [x]  
 
+<<<<<<< HEAD
 > 1. 在gdb中通过break加行号得到物理地址，list加*物理地址得到行号。
 > 2. 用nm, objdump工具可以看到
+=======
+> 起始地址 + offset =  gdb 过程中出现的地址 
+>>>>>>> quiz2
 
 了解函数调用栈对lab实验有何帮助？
 - [x]  
 
+<<<<<<< HEAD
 > 除了错可以调试 
 > 对于函数的调用过程和程序的运行过程有更好的理解。
 > 便于调试以及检查。 
+=======
+> 可以知道函数调用的过程和返回值的过程   
+>>>>>>> quiz2
 
 你希望从lab中学到什么知识？
 - [x]  
 
->   
+> 对操作系统的内部有更加深入的了解 
 
 ---
 
@@ -48,24 +66,36 @@
 搭建好实验环境，请描述碰到的困难和解决的过程。
 - [x]  
 
+<<<<<<< HEAD
 > 困难：在virtualbox中设置虚拟机的时候找不到Linux的64位选项。
 > 解决：需要通过BIOS设置将电脑的虚拟化功能打开（本电脑LenovoY480的VT功能是锁的，需要打开）。
 > 开始时选择了UBUNTU 32位，不能启动，后来换成64位就能顺利运行
+=======
+> 没有流量 
+>>>>>>> quiz2
 
 熟悉基本的git命令行操作命令，从github上
 的 http://www.github.com/chyyuu/ucore_lab 下载
 ucore lab实验
 - [x]  
 
+<<<<<<< HEAD
 > clone 仓库 
 > gitclone http://www.github.com/chyyuu/ucore_lab
+=======
+> 已经clone
+>>>>>>> quiz2
 
 尝试用qemu+gdb（or ECLIPSE-CDT）调试lab1
 - [x]   
 
+<<<<<<< HEAD
 > 清除文件夹：make clean 
 > 编译lab1：make 
 > 调出debug命令行：make debug
+=======
+> 成功 
+>>>>>>> quiz2
 
 对于如下的代码段，请说明”：“后面的数字是什么含义
 ```
@@ -85,7 +115,12 @@ ucore lab实验
 
 - [x]  
 
+<<<<<<< HEAD
 > 每一个filed(域，成员变量)在struct(结构)中所占的位数; 也称“位域”，用于表示这个成员变量占多少位(bit)。
+=======
+> bit field 技术，将若干个数据域压缩到一个structure中，通过在每个变量后放置:bit length，
+来指定它所占的位数。
+>>>>>>> quiz2
 
 对于如下的代码段，
 ```
@@ -109,9 +144,13 @@ SETGATE(intr, 0,1,2,3);
 ```
 请问执行上述指令后， intr的值是多少？
 
+<<<<<<< HEAD
 - [x]  0x10002
 
 > https://github.com/chyyuu/ucore_lab/blob/master/related_info/lab0/lab0_ex3.c
+=======
+> 10002 
+>>>>>>> quiz2
 
 请分析 [list.h](https://github.com/chyyuu/ucore_lab/blob/master/labcodes/lab2/libs/list.h)内容中大致的含义，并能include这个文件，利用其结构和功能编写一个数据结构链表操作的小C程序
 - [x]  
